@@ -1,0 +1,52 @@
+﻿@model WebApplication1.Models.HOD
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("Teacher Name")
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model.teacher)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.staffName)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("Student Name")
+        </th>
+        <th>
+            @Html.DisplayName("Student Age")
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model.student)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+        </tr>
+    }
+
+</table>
